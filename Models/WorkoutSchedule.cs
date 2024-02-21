@@ -22,21 +22,16 @@ namespace FitnessTreker_v1._0._2_OLYU.Models
     {
         public int WorkoutScheduleId { get; set; }
 
-        public Trainer Trainer { get; set; } = null!;
-        public int WorkoutTypeId { get; set; }
-        public WorkoutTypes WorkoutType { get; set; }
-        [Required]
-        public string? WorkoutName { get; set; }
-        public string WorkoutDescription { get; set; } = null!;
-        [Required]
-        [NotMapped]
-        public TimeOnly StartWH { get; set; }
-
-        public string StartWHString { get; set; } = null!;
-    [NotMapped]
-        public TimeOnly EndWH { get; set; }
+        public ICollection<Workout> Workouts { get; set; }
 
         [Required]
-        public string EndWHString { get; set; } = null!;
-    }
+        public DateTime StartWHString { get; set; }
+
+        [Required]
+        public DateTime EndWH { get; set; }
+        public int UserScheduleId { get; set; }
+        public UserSchedule UserSchedules { get; set; }
+
+        
+}
 }

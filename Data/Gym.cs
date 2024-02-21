@@ -10,11 +10,11 @@ namespace FitnessTreker_v1._0._2_OLYU.Models
     public class Gym  : DbContext
     {
  
-        public DbSet<Trainer> Trainers { get; set; } = null!;
+       
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<WorkoutSchedule> WorkoutSchedules { get; set; } = null!;
-        public DbSet<WorkoutTypes> WorkoutTypes { get; set; } = null!;
-      
+        public DbSet<Workout> Workouts { get; set; } = null!;
+        public DbSet<UserSchedule> UserSchedules { get; set; } = null!;
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 

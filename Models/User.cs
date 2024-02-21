@@ -26,6 +26,10 @@ namespace FitnessTreker_v1._0._2_OLYU.Models
 
         public int UserTelegramId { get; set; }
 
+        
+
+        public UserSchedule UserSchedules { get; set; }
+
 
     }
 }
