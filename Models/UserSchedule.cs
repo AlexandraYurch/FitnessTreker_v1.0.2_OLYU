@@ -19,19 +19,15 @@ namespace FitnessTreker_v1._0._2_OLYU.Models
     }
     public class UserSchedule
     {
-        public ICollection<User> Users { get; set; }
+        public ICollection<User> Users { get; set; }//userid not collection
 
         [Required]
         public int UserScheduleId { get; set; }
-        [Required]
-        public string UserTelegramId { get; set; }
-
-        public string UserFullName { get; set; } = null!;
 
         public bool Attended { get; set; }
 
 
-        public ICollection<Workout> Workouts { get; set; }
+        public ICollection<WorkoutSchedule> WorkoutSchedules { get; set; }
 
 
     }
