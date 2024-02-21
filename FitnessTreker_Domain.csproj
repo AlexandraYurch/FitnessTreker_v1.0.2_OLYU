@@ -9,6 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="FitnessTrecker_v.1.0.2_Business\**" />
+    <Compile Remove="FitnessTrecker_v.1.0.2_UI\**" />
+    <EmbeddedResource Remove="FitnessTrecker_v.1.0.2_Business\**" />
+    <EmbeddedResource Remove="FitnessTrecker_v.1.0.2_UI\**" />
+    <None Remove="FitnessTrecker_v.1.0.2_Business\**" />
+    <None Remove="FitnessTrecker_v.1.0.2_UI\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0-preview5.24024.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="6.0.2" />
