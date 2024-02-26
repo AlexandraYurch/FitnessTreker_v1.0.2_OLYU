@@ -1,4 +1,4 @@
-﻿using FitnessTreker_v1._0._2_OLYU.Models;
+﻿using FitnessTreker_Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FitnessTrecker_v._1._0._2_Business.Interfaces
+namespace FitnessTrecker_Domain.Interfaces
 {
     public interface IUserRepository
     {

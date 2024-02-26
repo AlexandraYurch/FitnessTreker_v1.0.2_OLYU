@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FitnessTrecker_v._1._0._2_Business.Interfaces;
-using FitnessTreker_v1._0._2_OLYU.Models;
-using Telegram.Bot.Types;
+﻿using FitnessTrecker_Domain.Interfaces;
+using FitnessTreker_Domain.Models;
+using FitnessTreker_Domain.Data;
 
-namespace FitnessTrecker_v._1._0._2_Business
+namespace FitnessTrecker_Domain
 {
     public class WorkoutRepository : IWorkoutRepository
     {
