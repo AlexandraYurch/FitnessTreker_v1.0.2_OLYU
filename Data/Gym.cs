@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FitnessTreker_v1._0._2_OLYU.Data;
-namespace FitnessTreker_v1._0._2_OLYU.Models
+using FitnessTreker_Domain.Models;
+using System.Configuration;
+
+namespace FitnessTreker_Domain.Data
 {
     public class Gym  : DbContext
     {
@@ -17,8 +19,8 @@ namespace FitnessTreker_v1._0._2_OLYU.Models
         public DbSet<UserSchedule> UserSchedules { get; set; } = null!;
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-
-            optionsBuilder.UseSqlServer(@"data source=D365DEVOLYU;initial catalog=GymDB;Trusted_Connection=True;TrustServerCertificate=True;");
+            string connectionstring = ConfigurationManager.ConnectionStrings["DB"].ConnectionString;
+            optionsBuilder.UseSqlServer(@connectionstring);
         }
 
       

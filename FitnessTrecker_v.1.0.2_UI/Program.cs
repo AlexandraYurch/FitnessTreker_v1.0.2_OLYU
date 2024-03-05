@@ -1,13 +1,19 @@
 ﻿
 using Microsoft.VisualBasic;
+using System.Configuration;
 using Telegram.Bot;
 using Telegram.Bot.Exceptions;
 using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 
-var botClient = new TelegramBotClient("6938546341:AAENyjD8BS7KkYI5ewsdzHwh2aSMOojW2Jk");
+
+
+string connectionstring = ConfigurationManager.ConnectionStrings["TelegramBot"].ConnectionString;
+
+var botClient = new TelegramBotClient(connectionstring);
 using CancellationTokenSource cts = new();
+
 // StartReceiving does not block the caller thread. Receiving is done on the ThreadPool.
 ReceiverOptions receiverOptions = new()
 {

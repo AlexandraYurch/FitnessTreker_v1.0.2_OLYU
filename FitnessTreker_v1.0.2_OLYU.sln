@@ -5,9 +5,9 @@ VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FitnessTreker_Domain", "FitnessTreker_Domain.csproj", "{873F50A1-E347-4E76-9D05-30DD64F03953}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessTrecker_v.1.0.2_UI", "FitnessTrecker_v.1.0.2_UI\FitnessTrecker_v.1.0.2_UI.csproj", "{0EAB9FC6-3DC7-4650-818F-78AB5466172A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FitnessTrecker_UI", "FitnessTrecker_v.1.0.2_UI\FitnessTrecker_UI.csproj", "{0EAB9FC6-3DC7-4650-818F-78AB5466172A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessTrecker_v.1.0.2_Business", "FitnessTrecker_v.1.0.2_Business\FitnessTrecker_v.1.0.2_Business.csproj", "{CA478F54-CEC5-41FD-A3EF-8C64EE2B6CBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FitnessTrecker_Business", "FitnessTrecker_v.1.0.2_Business\FitnessTrecker_Business.csproj", "{CA478F54-CEC5-41FD-A3EF-8C64EE2B6CBA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
