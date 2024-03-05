@@ -4,26 +4,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FitnessTreker_Domain.Models;
 using System.Configuration;
+using FitnessTreker_v1._0._2_OLYU.Models;
+using System.Diagnostics;
 
-namespace FitnessTreker_Domain.Data
+namespace FitnessTreker_v1._0._2_OLYU.Data
 {
-    public class Gym  : DbContext
+    public class Gym : DbContext
     {
- 
-       
-        public DbSet<User> Users { get; set; } = null!;
-        public DbSet<WorkoutSchedule> WorkoutSchedules { get; set; } = null!;
-        public DbSet<Workout> Workouts { get; set; } = null!;
-        public DbSet<UserSchedule> UserSchedules { get; set; } = null!;
+
+        //public Gym(DbContextOptions<Gym> options) : base(options) { }
+        public DbSet<User> Users { get; set; }
+        public DbSet<WorkoutSchedule> WorkoutSchedules { get; set; }
+        public DbSet<Workout> Workouts { get; set; }
+        public DbSet<Visiting> Visitings { get; set; }
+        public DbSet<Schedule> Schedules { get; set; }
+
+        
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string connectionstring = ConfigurationManager.ConnectionStrings["DB"].ConnectionString;
-            optionsBuilder.UseSqlServer(@connectionstring);
+           // Debugger.Launch();
+            //string connectionstring = ConfigurationManager.ConnectionStrings["DB"].ConnectionString;
+            //optionsBuilder.UseSqlServer(@connectionstring);
+            optionsBuilder.UseSqlServer(@"data source = D365DEVOLYU; initial catalog = GymDb_1; Trusted_Connection = True; TrustServerCertificate = True;");
         }
 
-      
+
 
     }
 }
