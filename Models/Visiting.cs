@@ -13,9 +13,9 @@ namespace FitnessTreker_v1._0._2_OLYU.Models
 
         public ICollection<WorkoutSchedule> WorkoutSchedules { get; set; }
 
-         public ICollection<User> Users { get; set; }
-       // public int UserId { get; set; }
-        // public User User { get; set; }
+         //public ICollection<User> Users { get; set; }
+         public int UserId { get; set; }
+         public User User { get; set; }
          
 
     }
