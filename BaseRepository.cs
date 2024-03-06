@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FitnessTreker_Domain.Interfaces;
-using FitnessTreker_Domain.Data;
 using Microsoft.EntityFrameworkCore;
 using NPOI.SS.Formula.Functions;
+using FitnessTreker_v1._0._2_OLYU.Interfaces;
+using FitnessTreker_v1._0._2_OLYU.Data;
 
-
-namespace FitnessTreker_Domain
+namespace FitnessTreker_v1._0._2_OLYU
 {
-    public class BaseRepository<T> : IBaseRepository<T> where T : class
+    /*public class BaseRepository<T> : IBaseRepository<T> where T : class
     {
         private Gym _context;
         private DbSet<T> _setContext;
@@ -21,32 +20,34 @@ namespace FitnessTreker_Domain
             _context = context;
             _setContext = context.Set<T>();
         }
-        
-        public Task<T> DeleteRecordAsync(T entity)
+
+        public async Task<T> DeleteRecordAsync(T entity)
         {
 
             _setContext.Remove(entity);
-            return (Task<T>)Task.CompletedTask;
+            return await (Task<T>)Task.CompletedTask;
         }
 
-        public Task<T> GetByIdAsync(int id)
+        public async Task<T> GetByIdAsync(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<T> InsertRecordAsync(T entity)
+        public async Task<T> InsertRecordAsync(T entity)
+        {
+            _setContext.Remove(entity);
+            return await (Task<T>)Task.CompletedTask;
+        }
+
+        public async void SaveAsync()
         {
             throw new NotImplementedException();
         }
 
-        public void SaveAsync()
+        async Task<T> IBaseRepository<T>.UpdateRecordAsync(T entity)
         {
-            throw new NotImplementedException();
+            _setContext.Remove(entity);
+            return await (Task<T>)Task.CompletedTask;
         }
-
-        Task<T> IBaseRepository<T>.UpdateRecordAsync(T entity)
-        {
-            throw new NotImplementedException();
-        }
-    }
+    }*/
 }
